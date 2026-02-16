@@ -1137,3 +1137,211 @@ h1 {
   height: 100% !important;
  display: block;
 }
+/* =========================================
+   ULTRA MOBILE RESPONSIVENESS APPEND
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+  
+  /* --- 1. Navbar Adjustments --- */
+  .fixed-nav {
+    top: 15px;
+    padding: 0.6rem 1.2rem;
+    width: 90%; /* Prevents it from hitting edges */
+    max-width: 400px;
+    border-radius: 30px;
+  }
+  
+  .nav-list {
+    gap: 1rem; /* Bring links closer */
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    font-size: 0.8rem; /* Smaller text */
+  }
+
+  /* --- Layout Fixes for Mobile --- */
+  .hero {
+    flex-direction: column; /* Stack text and visual */
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px; /* Space for nav */
+  }
+
+  .hero-content, .hero-text {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1.5rem;
+    text-align: center; /* Center align for mobile usually looks cleaner */
+    align-items: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 50vh; /* Give canvas less space on mobile */
+  }
+
+  /* --- 2. Subtitle Reductions --- */
+  .hero-subtitle, 
+  .subtitle {
+    font-size: 1rem !important; /* Force override */
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  /* --- 3. Social Links --- */
+  .social-links {
+    gap: 1.2rem;
+    justify-content: center; /* Center the links */
+    margin-top: 1rem;
+  }
+  
+  .social-link {
+    font-size: 0.7rem; /* Tiny uppercase text */
+  }
+
+  /* --- 4. About Me Content --- */
+  .about-content {
+    padding: 1.5rem; /* Shrink the box padding */
+  }
+  
+  .about-content .lead {
+    font-size: 1rem; /* Reduce generic text size */
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .signature {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+
+  /* --- 5. Research & Project Pills (Shrinking Boxes & Text) --- */
+  .research-grid, 
+  .holographic-grid {
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Shrink the card containers */
+  .research-card, 
+  .holographic-card {
+    padding: 1.25rem; 
+    min-height: auto; /* Allow height to shrink to content */
+  }
+
+  /* Titles inside cards */
+  .research-title, 
+  .project-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* BODY TEXT inside cards (The specific request) */
+  .research-description, 
+  .project-description {
+    font-size: 0.85rem; /* Smaller readable text */
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Tech tags/pills inside cards */
+  .tech-tag, 
+  .tech-pill {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* --- 6. Experience Content --- */
+  .experience-container {
+    padding: 4rem 1rem;
+  }
+
+  .timeline {
+    padding-left: 1rem; /* Reduce left spacing */
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem; /* Bring content closer to line */
+    padding-bottom: 2.5rem;
+  }
+
+  .timeline-content {
+    padding: 1rem; /* Shrink box padding */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-period {
+    font-size: 0.8rem;
+  }
+
+  /* Experience description text */
+  .timeline-content p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+  
+  /* Global Headers */
+  h1, .hero-title, .holographic-section-title {
+    font-size: 2.8rem !important; /* Prevent massive headers */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* =========================================
+   EXTRA-SMALL DEVICES (Phone Portrait < 480px)
+   ========================================= */
+@media screen and (max-width: 480px) {
+  
+  /* Tighter Navbar */
+  .fixed-nav {
+    padding: 0.5rem 1rem;
+    width: 95%;
+  }
+  
+  .nav-btn {
+    font-size: 0.7rem;
+  }
+
+  /* Even smaller Hero text */
+  h1, .hero-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .hero-subtitle, .subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  /* Maximum box shrinking */
+  .card, 
+  .research-card, 
+  .holographic-card, 
+  .about-content,
+  .timeline-content {
+    padding: 1rem !important; /* Force tight padding */
+  }
+  
+  /* Text tightening */
+  p, 
+  .research-description, 
+  .project-description, 
+  .about-content .lead,
+  .timeline-content p {
+    font-size: 0.8rem !important; /* Small but readable */
+  }
+  
+  /* Adjust dot background so it doesn't overwhelm small screens */
+  .red-dot {
+    opacity: 0.3;
+  }
+}
