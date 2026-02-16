@@ -515,7 +515,6 @@ const Experience = () => {
     {
       role: 'SDE Intern',
       company: 'Kognitive Networks',
-      period: 'Feb 2026 - Present',
       points: [
         'Architected a production-grade RAG search bot on AWS (Bedrock + OpenSearch Serverless) to democratize internal knowledge access.',
         'Engineered an XGBoost-based forecasting system for TCP/RTP streams to predict Quality of Experience (QoE) in real-time.',
@@ -543,8 +542,6 @@ const Experience = () => {
 
             <div className="timeline-content">
               <h3>{exp.role} · {exp.company}</h3>
-              <p className="timeline-period">{exp.period}</p>
-
               <ul>
                 {exp.points.map((point, i) => (
                   <li key={i}>{point}</li>
