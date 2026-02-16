@@ -516,16 +516,22 @@ const Experience = () => {
       role: 'SDE Intern',
       company: 'Kognitive Networks',
       period: 'Feb 2026 - Present',
-      description: '• Architected a production-grade RAG search bot on AWS (Bedrock + OpenSearch Serverless) to democratize internal knowledge access.\n• Engineered an XGBoost-based forecasting system for TCP/RTP streams to predict Quality of Experience (QoE) in real-time.\n• Built a scalable agent using n8n and Pinecone to automate customer support tickets.\n• Developed an AI-driven analytics engine on Google ADK for optimizing network usage in maritime environments.'
+      points: [
+        'Architected a production-grade RAG search bot on AWS (Bedrock + OpenSearch Serverless) to democratize internal knowledge access.',
+        'Engineered an XGBoost-based forecasting system for TCP/RTP streams to predict Quality of Experience (QoE) in real-time.',
+        'Built a scalable agent using n8n and Pinecone to automate customer support tickets.',
+        'Developed an AI-driven analytics engine on Google ADK for optimizing network usage in maritime environments.'
+      ]
     }
   ];
 
   return (
     <div id="internship" className="experience-container">
       <h2 className="section-title">The Path</h2>
+
       <div className="timeline">
         {experiences.map((exp, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="timeline-item"
             initial={{ opacity: 0, x: -20 }}
@@ -534,10 +540,16 @@ const Experience = () => {
             transition={{ delay: index * 0.2, duration: 0.5 }}
           >
             <div className="timeline-dot" />
+
             <div className="timeline-content">
               <h3>{exp.role} · {exp.company}</h3>
               <p className="timeline-period">{exp.period}</p>
-              <p>{exp.description}</p>
+
+              <ul>
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
